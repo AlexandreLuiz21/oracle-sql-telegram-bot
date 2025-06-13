@@ -1,0 +1,8 @@
+python-telegram-bot==20.7
+langchain
+google-generativeai
+faiss-cpu
+unstructured
+tqdm
+python-dotenv
+PyPDF2

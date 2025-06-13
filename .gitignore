@@ -1,0 +1,22 @@
+# Ambiente virtual
+venv/
+__pycache__/
+
+# Arquivos de ambiente (contêm segredos)
+.env
+
+# Arquivos específicos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDE
+.vscode/
+.idea/
+
+# Arquivos gerados
+*.pyc
+*.pyo
+*.pyd
+*.db
+vectordb/
+oracle_dba_telegram_bot.rar
