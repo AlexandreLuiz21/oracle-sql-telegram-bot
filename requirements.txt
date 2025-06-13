@@ -6,3 +6,4 @@ unstructured
 tqdm
 python-dotenv
 PyPDF2
+langchain-community
