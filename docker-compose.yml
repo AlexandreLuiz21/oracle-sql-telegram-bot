@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  oracle_bot:
+    build: .
+    container_name: oracle_telegram_bot
+    restart: unless-stopped
+    volumes:
+      - ./oracle_docs:/app/oracle_docs
+      - ./vectordb:/app/vectordb  # Para persistir o banco de vetores
+    env_file:
+      - .env  # Carrega variáveis de ambiente do arquivo .env
