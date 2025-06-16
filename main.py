@@ -28,10 +28,10 @@ documents_sql_reference = loader_sql_reference.load()
 loader_backup_recovery = PyPDFLoader("oracle_docs/database-backup-and-recovery-reference.pdf")
 documents_backup_recovery = loader_backup_recovery.load()
 
-loader_backup_recovery = PyPDFLoader("oracle_docs/database-administrators-guide.pdf")
-documents_backup_recovery = loader_backup_recovery.load()
+loader_admin_guide = PyPDFLoader("oracle_docs/database-administrators-guide.pdf")
+documents_admin_guide = loader_admin_guide.load()
 
-all_documents = documents_sql_reference + documents_backup_recovery
+all_documents = documents_sql_reference + documents_backup_recovery + documents_admin_guide
 
 db = FAISS.from_documents(all_documents, embeddings)
 retriever = db.as_retriever()
