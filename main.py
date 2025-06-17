@@ -31,10 +31,7 @@ documents_backup_recovery = loader_backup_recovery.load()
 loader_admin_guide = PyPDFLoader("oracle_docs/database-administrators-guide.pdf")
 documents_admin_guide = loader_admin_guide.load()
 
-loader_error_messages = PyPDFLoader("oracle_docs/database-error-messages.pdf")
-documents_error_messages = loader_error_messages.load()
-
-all_documents = documents_sql_reference + documents_backup_recovery + documents_admin_guide + documents_error_messages
+all_documents = documents_sql_reference + documents_backup_recovery + documents_admin_guide
 
 db = FAISS.from_documents(all_documents, embeddings)
 retriever = db.as_retriever()
