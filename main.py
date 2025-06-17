@@ -22,7 +22,7 @@ embeddings = GoogleGenerativeAIEmbeddings(
 )
 
 # Carregar e indexar PDF
-'''loader_sql_reference = PyPDFLoader("oracle_docs/sql-language-reference.pdf")
+loader_sql_reference = PyPDFLoader("oracle_docs/sql-language-reference.pdf")
 documents_sql_reference = loader_sql_reference.load()
 
 loader_backup_recovery = PyPDFLoader("oracle_docs/database-backup-and-recovery-reference.pdf")
@@ -34,7 +34,7 @@ documents_admin_guide = loader_admin_guide.load()
 loader_error_messages = PyPDFLoader("oracle_docs/database-error-messages.pdf")
 documents_error_messages = loader_error_messages.load()
 
-all_documents = documents_sql_reference + documents_backup_recovery + documents_admin_guide + documents_error_messages'''
+all_documents = documents_sql_reference + documents_backup_recovery + documents_admin_guide + documents_error_messages
 
 db = FAISS.from_documents(all_documents, embeddings)
 retriever = db.as_retriever()
